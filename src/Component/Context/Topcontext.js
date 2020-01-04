@@ -29,13 +29,13 @@ export const Topcontextfunction = props => {
 
     const [Globalcontext, Globalcontextdispatch] = useReducer(Globalcontextreducer, {
         UrlHeader: "http://localhost:57494/",
-   
-        OpenFunction: { QueryDraw: true, QueryNumber: false, QueryNumberTail: false },
+
+        OpenFunction: { QueryDraw: true, QueryNumber: false, QueryNumberTail: false, QuerySameDealerNumber: false },
     });//設定useReducer
     // console.log(color, dispatch);
     // console.log(props)
     return (
-        <Topcontext.Provider value={{ Globalcontext, Globalcontextdispatch}}>
+        <Topcontext.Provider value={{ Globalcontext, Globalcontextdispatch }}>
             {props.children}{/*渲染子組件*/}
         </Topcontext.Provider>
     );

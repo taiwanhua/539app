@@ -53,6 +53,15 @@ const LeftNav = ({ props, ...other }) => {
                 });
 
             }}>中獎號碼統計(中獎尾數)</ListItem>
+            <ListItem onClick={() => {
+                Globalcontextdispatch({
+                    type: "OpenFunction",
+                    payload: {
+                        OpenFunction: { ...Globalcontext.OpenFunction, QuerySameDealerNumber: !Globalcontext.OpenFunction.QuerySameDealerNumber }
+                    }
+                });
+
+            }}>連莊中獎號碼統計</ListItem>
         </LeftNavFlexCol>
     );
 };
