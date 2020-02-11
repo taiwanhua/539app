@@ -5,7 +5,7 @@ import QueryDraw from '../../Functional/QueryDraw'
 import QueryNumber from '../../Functional/QueryNumber'
 import QueryNumberTail from '../../Functional/QueryNumberTail'
 import QuerySameDealerNumber from '../../Functional/QuerySameDealerNumber'
-
+import QueryEveryNumTimes from '../../Functional/QueryEveryNumTimes'
 const MainBody = ({ props, ...other }) => {
     const { Globalcontext, Globalcontextdispatch } = useContext(Topcontext);
     return (
@@ -14,7 +14,8 @@ const MainBody = ({ props, ...other }) => {
             {Globalcontext.OpenFunction.QueryNumber && <QueryNumber />}
             {Globalcontext.OpenFunction.QueryNumberTail && <QueryNumberTail />}
             {Globalcontext.OpenFunction.QuerySameDealerNumber && <QuerySameDealerNumber />}
-        </FlexCol>
+            {Globalcontext.OpenFunction.QueryEveryNumTimes && <QueryEveryNumTimes />}
+        </FlexCol >
     )
 };
 

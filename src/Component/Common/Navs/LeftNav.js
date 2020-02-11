@@ -62,6 +62,15 @@ const LeftNav = ({ props, ...other }) => {
                 });
 
             }}>連莊中獎號碼統計</ListItem>
+            <ListItem onClick={() => {
+                Globalcontextdispatch({
+                    type: "OpenFunction",
+                    payload: {
+                        OpenFunction: { ...Globalcontext.OpenFunction, QueryEveryNumTimes: !Globalcontext.OpenFunction.QueryEveryNumTimes }
+                    }
+                });
+
+            }}>各號碼開出次數統計</ListItem>
         </LeftNavFlexCol>
     );
 };

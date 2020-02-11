@@ -30,7 +30,7 @@ export const Topcontextfunction = props => {
     const [Globalcontext, Globalcontextdispatch] = useReducer(Globalcontextreducer, {
         UrlHeader: "http://localhost:57494/",
 
-        OpenFunction: { QueryDraw: true, QueryNumber: false, QueryNumberTail: false, QuerySameDealerNumber: false },
+        OpenFunction: { QueryDraw: true, QueryNumber: false, QueryNumberTail: false, QuerySameDealerNumber: false, QueryEveryNumTimes: false },
     });//設定useReducer
     // console.log(color, dispatch);
     // console.log(props)
